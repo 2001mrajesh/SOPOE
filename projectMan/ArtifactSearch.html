@@ -31,11 +31,51 @@
   background-color: white;
   overflow: hidden;
 }
+.float-container {
+    border: 3px solid #fff;
+    padding: 20px;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
+   
+}  
+.float-child1{
+  width: 50%;
+    float: top;
+    padding: 20px;
+}
+.thumbnails {
+    padding: 35px;
+}
+.thumbnail {
+    float:left;
+    position:relative;
+    width: 80%;
+    margin-right: 10px;
+}
+.thumbnail img{
+    /* ... */
+    width:250px;
+    height:250px;
+}    
+
+.thumbnail:hover img {
+    position:relative;
+    top:-25px;
+    left:-35px;
+    width: 550px;
+    height:500px;;
+    display:block;
+    z-index:999;
+}
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
 
+<script>
 $(document).ready(function(){  
   $(".accordion").click(function(){  
   	$(this).toggleClass("active");    
@@ -108,17 +148,18 @@ $(document).ready(function(){
       <h2>Artifact Search</h2>
       <h5>What do we do here</h5>
       <div class="fakeimg">SS of Artifacts Search</div>
-      <p>Consolidated set of tools and dashboards to create, edit, and manage artifacts and associated workflow</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <p>This is a consolidated set of tools and dashboards to create, edit, and manage artifacts and associated workflow</p>
+      
 
       </div>
+  </body>
 
-      <br>
-<body>
-  
+
+  <div class="float-container">
+
+    <div class="float-child">
   <h2>Artifact Advanced Search</h2>
-  <p>Search project artifact metadata across a broad range of search criteria. Manage artifact workflow and metadata directly from search results grid and tile navigation controls.</p>
-  <p>Click on the links below to open the collapsible content.</p>
+  <p>Search project artifact metadata across a broad range of search criteria. Manage artifact workflow and metadata directly from search results grid and tile navigation controls.Click on the links below to open the collapsible content.</p>
   <button class="accordion">The artifact search results are displayed in a tile navigation control which provides capabilities to view additional artifact and workflow details for each record.
   </button>
   <div class="panel">
@@ -144,28 +185,61 @@ $(document).ready(function(){
   <div class="panel">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   </div>
-  
-  
-  <br>
-  <h2>Artifact Simple Search</h2>
-  <p>Search project artifact metadata across a broad range of search criteria. Manage artifact workflow and metadata directly from search results grid and tile navigation controls.</p>
-  <p>Click on the links below to open the collapsible content:</p>
-  <button class="accordion">Enter search criteria across a more limited range of attributes as compared to the complex search  </button>
-  <div class="panel">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class = "float-child">
+      <h5>Roll over image for an expanded version:</h5>
+      <div class="thumbnails">
+        <div class="thumbnail">
+          <img src="../Images/ArtifactAdvanceSearch.png">
+        </div>
+      </div>
+     
+    </div>
   </div>
-  
-  <button class="accordion">Search results are displayed in a navigable list view with controls to sort and export results </button>
-  <div class="panel">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+  <div class="float-container">
+
+    <div class="float-child">
+      
+      <h5>Roll over image for an expanded version:</h5>
+      <div class="thumbnails">
+        <div class="thumbnail">
+          <img src="../Images/ArtifactSimpleSearch.png">
+        </div>
+      </div>
+     
+    </div>
+    
+    <div class="float-child">
+     
+          <h2>Artifact Simple Search</h2>
+      <p>Search project artifact metadata across a broad range of search criteria. Manage artifact workflow and metadata directly from search results grid and tile navigation controls.</p>
+      <p>Click on the links below to open the collapsible content:</p>
+      <button class="accordion">Enter search criteria across a more limited range of attributes as compared to the complex search  </button>
+      <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      
+      <button class="accordion">Search results are displayed in a navigable list view with controls to sort and export results </button>
+      <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      
+      <button class="accordion">Click on artifact number to view and edit artifact details and workflow</button>
+      <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+       
+      
+    </div>
+    
   </div>
-  
-  <button class="accordion">Click on artifact number to view and edit artifact details and workflow</button>
-  <div class="panel">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  </div>
-  
-  <h2>View/Edit Artifact Details</h2>
+
+
+  <div class="float-container">
+
+    <div class="float-child">
+      <h2>View/Edit Artifact Details</h2>
   <p>Users have the option to view and edit specific details regarding a particular artifact. </p>
   <p>Click on the links below to open the collapsible content:</p>
   <button class="accordion">Workflow options displayed dynamically based on current artifact status  </button>
@@ -197,13 +271,23 @@ $(document).ready(function(){
   <div class="panel">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   </div>
-
-  </body>
+      
+    </div>
+    
+    <div class="float-child">
+     
+      <h5>Roll over image for an expanded version:</h5>
+      <div class="thumbnails">
+        <div class="thumbnail">
+          <img src="../Images/EditArti.png" height = "100px">
+        </div>
+      </div>
+      
+    </div>
+    
   </div>
-</div>
 
-</body>
-<div class="mt-5 p-4 bg-dark text-white text-center">
+  <div class="mt-5 p-4 bg-dark text-white text-center">
     <p>Powered By Deloitte</p>
   </div>
 </html>
