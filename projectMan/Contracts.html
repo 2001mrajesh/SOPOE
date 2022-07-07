@@ -71,6 +71,81 @@
       display:block;
       z-index:999;
   }
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
   </style>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -110,7 +185,7 @@
           <a class="nav-link" href="../SystemManagment.html">System Management</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="../ProjectManagment.html">Project Management</a>
+          <a class="nav-link" href="../ProjectManagment.html">Project Management</a>
         </li>
     </ul>
   </div>
@@ -147,7 +222,7 @@
     <div class="col-sm-8">
       <h2>Contracts</h2>
       <h5>What do we do here</h5>
-      <div class="fakeimg">SS of Contracts</div>
+      <img src="../Images/contractsMain.PNG" width="60%" class="center">
       <p>Contracts are the overall engagements with the clients.At the highest level, contracts represent the top-level program governance hierarchy, with one-to-many relationships with purchase orders. </p>
 
       </div>
@@ -159,7 +234,16 @@
   <div class="float-container">
 
     <div class="float-child">
-      
+    
+
+
+
+
+
+
+
+
+
       <h2>Contract Overview</h2>
       <p>Contract overview allows one to view contract summary across programs with  ability to view and manage individual contract details. Click on the links below to open the collapsible content.</p>
       <button class="accordion">View contract summary and filter by status and anticipated closing date
@@ -181,14 +265,54 @@
     </div>
     
     <div class="float-child">
-     
-      <h5>Roll over image for an expanded version:</h5>
-      <div class="thumbnails">
-        <div class="thumbnail">
-          <img src="../Images/ContractOverview.png">
-        </div>
-      </div>
+      <h5>Click on image to expand</h5>
+            
+     <img id="myImg" src="../Images/ContractOverview.png" alt="Contracts Overview" style="width:100%;max-width:300px" class="center">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
       
+<script>
+  // Get the button that opens the modal
+var btn = document.querySelectorAll("button.modal-button");
+
+// All page modals
+var modals = document.querySelectorAll('.modal');
+
+// Get the <span> element that closes the modal
+var spans = document.getElementsByClassName("close");
+
+// When the user clicks the button, open the modal
+for (var i = 0; i < btn.length; i++) {
+ btn[i].onclick = function(e) {
+    e.preventDefault();
+    modal = document.querySelector(e.target.getAttribute("href"));
+    modal.style.display = "block";
+ }
+}
+
+// When the user clicks on <span> (x), close the modal
+for (var i = 0; i < spans.length; i++) {
+ spans[i].onclick = function() {
+    for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+    }
+ }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+     for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+     }
+    }
+}
+</script>
     </div>
     
   </div>
@@ -198,12 +322,49 @@
 
     <div class="float-child">
       
-      <h5>Roll over image for an expanded version:</h5>
-      <div class="thumbnails">
-        <div class="thumbnail">
-          <img src="../Images/NewContract.png">
-        </div>
-      </div>
+      <h5>Click on image to expand</h5>
+     
+      <img id="myImg" src="../Images/NewContract.png" alt="New Contracts" style="width:100%;max-width:300px" class="center">
+ 
+
+       
+      <script>
+        // Get the button that opens the modal
+      var btn = document.querySelectorAll("button.modal-button");
+      
+      // All page modals
+      var modals = document.querySelectorAll('.modal');
+      
+      // Get the <span> element that closes the modal
+      var spans = document.getElementsByClassName("close");
+      
+      // When the user clicks the button, open the modal
+      for (var i = 0; i < btn.length; i++) {
+       btn[i].onclick = function(e) {
+          e.preventDefault();
+          modal = document.querySelector(e.target.getAttribute("href"));
+          modal.style.display = "block";
+       }
+      }
+      
+      // When the user clicks on <span> (x), close the modal
+      for (var i = 0; i < spans.length; i++) {
+       spans[i].onclick = function() {
+          for (var index in modals) {
+            if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+          }
+       }
+      }
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target.classList.contains('modal')) {
+           for (var index in modals) {
+            if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+           }
+          }
+      }
+      </script>
     </div>
     
     <div class="float-child">

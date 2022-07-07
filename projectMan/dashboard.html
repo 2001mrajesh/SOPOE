@@ -1,67 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>OperateEdge</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
+  <head>
+    <title>OperateEdge</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <style>
-  .fakeimg {
-    height: 200px;
-    background: #aaa;
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
   }
-  img {
+  
+  .active, .accordion:hover {
+    background-color: #ccc; 
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }
+  .float-container {
+      border: 3px solid #fff;
+      padding: 20px;
+  }
+  
+  .float-child {
+      width: 50%;
+      float: left;
+      padding: 20px;
+     
+  }  
+  .float-child1{
+    width: 50%;
+      float: top;
+      padding: 20px;
+  }
+  .thumbnails {
+      padding: 35px;
+  }
+  .thumbnail {
+      float:left;
+      position:relative;
+      width: 80%;
+      margin-right: 10px;
+  }
+  .thumbnail img{
+      /* ... */
+      width:250px;
+      height:250px;
+  }    
+  
+  .thumbnail:hover img {
+      position:relative;
+      top:-25px;
+      left:-35px;
+      width: 550px;
+      height:500px;;
+      display:block;
+      z-index:999;
+  }
+  #myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+.center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 50%;
 }
-
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
-
-.active, .accordion:hover {
-  background-color: #ccc;
-}
-
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-
-#footer {
-   float: left;
-   width: 100%;
-}
-.float-container {
-    border: 3px solid #fff;
-    padding: 20px;
-}
-
-.float-child {
-    width: 50%;
-    float: left;
-    padding: 20px;
-   
-}  
   </style>
   
-</head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <script>
+  $(document).ready(function(){  
+    $(".accordion").click(function(){  
+      $(this).toggleClass("active");    
+      $(this).next(".panel").toggle();
+    });
+  });
+  
+  
+  </script>
+  
+  </head>
 <body>
 
 <div class="p-5 bg-success text-white text-center">
@@ -122,11 +238,8 @@
     <div class="col-sm-8">
       <h2>Dashboard</h2>
       <h5>What do we do here</h5>
-      <img src="../Images/PMO_ClientViews.PNG" width="500" height="310">
-      <p>This is a view that enables an automated tracking of workflow and milestone dates for project artifacts and has configurable, automated email and on-screen alerts to notify stakeholders of upcoming due dates</p>
-      
-
-      <p>An integrated dashboard to quickly access a range of project management artifacts, documents, and functions. </p>
+      <img src="../Images/PMO_ClientViews.PNG" width="900px" height="310px" class="center">
+      <p>This is a view that enables an automated tracking of workflow and milestone dates for project artifacts and has configurable, automated email and on-screen alerts to notify stakeholders of upcoming due dates.An integrated dashboard to quickly access a range of project management artifacts, documents, and functions. </p>
       
       
     </div>
@@ -142,7 +255,7 @@
   <div class="float-child">
     <div >
 
-      <h2>Client Dashboard Features</h2>
+      <h2>Client Dashboard </h2>
       <p>Click on the buttons to open the collapsible content.</p>
       
       <button class="accordion">Highlevel Overview of Pending and Submitted Artifacts</button>
@@ -165,18 +278,95 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </div>
     
-      <script src="../index.js"></script>
+      
       
     </div>
+
   </div>
   
   <div class="float-child">
     
+    <h5>Client Dashboard</h5>
+    <h5>Click on image to expand</h5>
+     
+    <img id="myImg" src="../Images/Client Dashboard.png" alt="Client Dashboard" style="width:100%;max-width:600px">
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+    </div>
+        
+    <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
     
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+    </script>
+   
+  </div>
+  
+</div>
 
-    <div>
+<div class="float-container">
 
-      <h2>Project Management Dashboard Features</h2>
+  <div class="float-child">
+    
+    <h5>PMO Dashboard</h5>
+    <h5>Click on image to expand</h5>
+     
+        <img id="myImg" src="../Images/PMO Dashboard (2).png" alt="Project Management Dashboard" style="width:100%;max-width:600px">
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img02">
+      <div id="caption"></div>
+    </div>
+      
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg");
+  var modalImg = document.getElementById("img02");
+  var captionText = document.getElementById("caption");
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+  </script>
+  </div>
+  
+  <div class="float-child">
+    <h2>Project Management Dashboard Features</h2>
       <p>Click on the links below to open the collapsible content.</p>
       
       <button class="accordion">Highlevel Overview of Pending and Submitted Deliverables</button>
@@ -208,26 +398,8 @@
       <div class="panel">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </div>
-    
-      <script src="../index.js"></script>
-      
-      </div>
-  </div>
-  
-</div>
 
-<div class="float-container">
 
-  <div class="float-child">
-    
-    <h5>PMO Dashboard</h5>
-    <img src = "../Images/PMO Dashboard.png">
-  </div>
-  
-  <div class="float-child">
-   
-    <h5>Client Dashboard</h5>
-      <img src = "../Images/Client Dashboard.png" height = "100%" >
     
   </div>
   
