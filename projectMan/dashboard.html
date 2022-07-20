@@ -31,10 +31,15 @@
     background-color: white;
     overflow: hidden;
   }
+  .space{
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
   .float-container {
       border: 3px solid #fff;
       padding: 20px;
   }
+
   
   .float-child {
       width: 50%;
@@ -209,10 +214,10 @@
 
 <div class="container mt-5">
   <div class="row">
-    <div class="col-sm-4">
-      <h3 class="mt-4">Some Links</h3>
+    <div class="col-sm-12 col-lg-4">
+      <h3 class="mt-4">Project Managment</h3>
       <p>To find a tutorial specific to each module, click on the links below:</p>
-      <ul class="nav nav-pills flex-column">
+      <ul class="nav nav-expand-sm nav-pills flex-column">
         <li class="nav-item">
           <a class="nav-link active" href="dashboard.html">Dashboard</a>
         </li>
@@ -236,218 +241,144 @@
       <hr class="d-sm-none">
     </div>
     <div class="col-sm-8">
+     
       <h2>Dashboard</h2>
       <h5>What do we do here</h5>
-      <img src="../Images/PMO_ClientViews.PNG" width="900px" height="310px" class="center">
+      <img src="../Images/PMO_ClientViews.PNG" width="100%" class="center">
       <p>This is a view that enables an automated tracking of workflow and milestone dates for project artifacts and has configurable, automated email and on-screen alerts to notify stakeholders of upcoming due dates.An integrated dashboard to quickly access a range of project management artifacts, documents, and functions. </p>
       
       
     </div>
+
 </body>
 
-
-
-
-
-
-<div class="float-container">
-
-  <div class="float-child">
-    <div >
-
+  <div class="float-container col-sm-8 col-md-8 space">
+    <div class="col-10">
       <h2>Client Dashboard </h2>
       <p>Click on the buttons to open the collapsible content.</p>
       
       <button class="accordion">Highlevel Overview of Pending and Submitted Artifacts</button>
       <div class="panel">
-        <div class="float-container1">
+        <div>
 
-          <div class="float-child1">
+          <div class="space">
+            
             <h6>Steps</h6>
-            <img src ="../Images/highlevelOverviewPMO.PNG" width="450px" >
-            <br>
             <p>The first feature is the artifact summary dashboard. This includes a calendar with a time stamp that enables clients to know how many artifacts are scheduled versus how many are submitted.</p>
+            <img src ="../Images/highlevelOverviewPMO.PNG" width="80%" >
+      
           </div>
           
-          <div class="float-child1">
+          <div class="space">
             <h6>Demo</h6>
-            <video width="320" height="240" controls>
+            <video width="320" height="240" class="center" controls>
               <source src="../Images/HighlevelClient_Trim.mp4" type="video/mp4" class="center">
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
+          
       </div>
       
       <button class="accordion">Filter Dashboard by Work Order ID</button>
       <div class="panel">
-         <div class="float-container1">
+        <div>
 
-          <div class="float-child1">
+          <div class="space">
+            
             <h6>Steps</h6>
-            <img src ="../Images/WorkOrderIDClient.png" width="450px" >
-            <br>
             <p>You can use the quick jump feature in order to find a certain work order based on its ID, which will pull up a summary of all the work orders listed under that ID as seen in the image above.</p>
+            <img src ="../Images/WorkOrderIDClient.png" width="80%" >
+      
           </div>
           
-          <div class="float-child1">
+          <div class="space">
             <h6>Demo</h6>
-            <video width="320" height="240" controls>
+            <video width="320" height="240" class="center" controls>
               <source src="../Images/QuickJumpClient.mp4" type="video/mp4" class="center">
               Your browser does not support the video tag.
             </video>
           </div>
-        </div> 
+        </div>
+          
       </div>
       
       <button class="accordion">Access List of Artifacts and Related Task from Dashboard Views</button>
       <div class="panel">
-         <div class="float-container1">
+        <div>
 
-          <div class="float-child1">
+          <div class="space">
+            
             <h6>Steps</h6>
-            <img src ="../Images/listofartifactsrelatedtask.PNG" width="450px" >
-            <br>
-            <p>As seen in the picture above, after finding and initiative to follow up with, you will get a summary board with artifacts listed under this initiative. </p>
+            <p>As seen in the picture below, after finding and initiative to follow up with, you will get a summary board with artifacts listed under this initiative. </p>
           </div>
-          
-          <div class="float-child1">
-            <h6>Demo</h6>
-            <video width="320" height="240" controls>
-              <source src="../Images/QuickJumpClient.mp4" type="video/mp4" class="center">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div> 
-      </div>
+            <img src ="../Images/listofartifactsrelatedtask.PNG" width="80%" >
       
-      <button class="accordion">Artifact Reports Organized by Disposition Due</button>
-      <div class="panel">
-         <div class="float-container1">
-
-          <div class="float-child1">
-            <h6>Steps</h6>
-            <img src ="../Images/Artifact Reports.PNG" width="450px" >
-            <br>
-            <p>This is a way to organize all the artifacts in an date organized fashion.</p>
           </div>
           
-          <div class="float-child1">
+          <div class="space">
             <h6>Demo</h6>
-            <video width="320" height="240" controls>
+            <video width="320" height="240" class="center" controls>
               <source src="../Images/ArtifactReport.mp4" type="video/mp4" class="center">
               Your browser does not support the video tag.
             </video>
           </div>
-        </div> 
+        </div>
+          
+      </div>
+      
+      <button class="accordion">Artifact Reports Organized by Disposition Due</button>
+      <div class="panel">
+        <div>
+
+          <div class="space">
+            
+            <h6>Steps</h6>
+            <p>The first feature is the artifact summary dashboard. This includes a calendar with a time stamp that enables clients to know how many artifacts are scheduled versus how many are submitted.</p>
+            <img src ="../Images/Artifact Reports.PNG" width="80%" >
+      
+          </div>
+          
+          <div class="space">
+            <h6>Demo</h6>
+            <video width="320" height="240" class="center" controls>
+              <source src="../Images/ArtifactReport.mp4" type="video/mp4" class="center">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+          
       </div>
     
       
       
     </div>
-
+  </div>
+  <div class =" col-md-2">
+    <img src="../Images/PMO Dashboard (2).png">
   </div>
   
-  <div class="float-child">
-    
-    <h5>Client Dashboard</h5>
-    <h5>Click on image to expand</h5>
-     
-    <img id="myImg" src="../Images/Client Dashboard.png" alt="Client Dashboard" >
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="img01">
-    <div id="caption"></div>
-    </div>
-        
-    <script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
-    
-    // Get the image and insert it inside the modal - use its "alt" text as a caption
-    var img = document.getElementById("myImg");
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    img.onclick = function(){
-      modal.style.display = "block";
-      modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
-    }
-    
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() { 
-      modal.style.display = "none";
-    }
-    </script>
-   
-  </div>
-  
-</div>
 
-<div class="float-container">
-
-  <div class="float-child">
-    
-    <h5>PMO Dashboard</h5>
-    <h5>Click on image to expand</h5>
-      
-    <img id="myImg" src="../Images/PMO Dashboard (2).png" alt="Client Dashboard" style="width:100%;max-width:600px">
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="img01">
-    <div id="caption"></div>
-    </div>
-        
-    <script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
-    
-    // Get the image and insert it inside the modal - use its "alt" text as a caption
-    var img = document.getElementById("myImg");
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    img.onclick = function(){
-      modal.style.display = "block";
-      modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
-    }
-    
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() { 
-      modal.style.display = "none";
-    }
-    </script>
-  </div>
-  
-  <div class="float-child">
-    <h2>Project Management Dashboard Features</h2>
+  <div class="float-container col-sm-6 col-lg-12 space">
+    <h2>Project Management Dashboard</h2>
       <p>Click on the links below to open the collapsible content.</p>
       
       <button class="accordion">Highlevel Overview of Pending and Submitted Deliverables</button>
       <div class="panel">
-        <div class="float-container1">
+        <div>
 
-          <div class="float-child1">
+          <div class="space">
             
             <h6>Steps</h6>
-            <p></p>
-            <img src ="../Images/highlevelOverviewPMO.PNG" width="450px" >
+            <p>The first feature is the artifact summary dashboard. This includes a calendar with a time stamp that enables clients to know how many artifacts are scheduled versus how many are submitted.</p>
+            <img src ="../Images/highlevelOverviewPMO.PNG" width="80%" >
       
           </div>
           
-          <div class="float-child1">
+          <div class="space">
             <h6>Demo</h6>
-            <video width="320" height="240" controls>
+            <video width="320" height="240" class="center" controls>
               <source src="../Images/USI-KT Recordings Day2.mp4" type="video/mp4" class="center">
               Your browser does not support the video tag.
             </video>
@@ -458,120 +389,128 @@
       
       <button class="accordion">Daily Summary of Deliverables and Related Activities Organized by Workflow Status</button>
       <div class="panel">
-        <div class="float-container1">
+        <div>
 
-          <div class="float-child1">
+          <div class="space">
+            
             <h6>Steps</h6>
-            <img src ="../Images/highlevelOverviewPMO.PNG" width="450px" >
-            <br>
-            <p>As seen in the picture above, each day is broken down into SCH or SUB </p>
+            <p>The first feature is the artifact summary dashboard. This includes a calendar with a time stamp that enables clients to know how many artifacts are scheduled versus how many are submitted.</p>
+            <img src ="../Images/highlevelOverviewPMO.PNG" width="80%" >
+      
           </div>
           
-          <div class="float-child1">
+          <div class="space">
             <h6>Demo</h6>
-            <video width="320" height="240" controls>
+            <video width="320" height="240" class="center" controls>
               <source src="../Images/USI-KT Recordings Day2.mp4" type="video/mp4" class="center">
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
+          
       </div>
       
       <button class="accordion">Search for Single Artifact</button>
       <div class="panel">
-        <div class="float-container1">
+        <div>
 
-          <div class="float-child1">
+          <div class="space">
+            
             <h6>Steps</h6>
-            <img src ="../Images/highlevelOverviewPMO.PNG" width="450px" >
-            <br>
-            <p>As seen in the picture above, each day is broken down into SCH or SUB </p>
+            <p>The first feature is the artifact summary dashboard. This includes a calendar with a time stamp that enables clients to know how many artifacts are scheduled versus how many are submitted.</p>
+            <img src ="../Images/highlevelOverviewPMO.PNG" width="80%" >
+      
           </div>
           
-          <div class="float-child1">
+          <div class="space">
             <h6>Demo</h6>
-            <video width="320" height="240" controls>
+            <video width="320" height="240" class="center" controls>
               <source src="../Images/USI-KT Recordings Day2.mp4" type="video/mp4" class="center">
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
+          
       </div>
+     
       
       <button class="accordion">Access list of Artifacts and Releated Tasks from Dashboard Views</button>
       <div class="panel">
-         <div class="float-container1">
+        <div>
 
-          <div class="float-child1">
+          <div class="space">
+            
             <h6>Steps</h6>
-            <img src ="../Images/highlevelOverviewPMO.PNG" width="450px" >
-            <br>
-            <p>As seen in the picture above, each day is broken down into SCH or SUB </p>
+            <p>The first feature is the artifact summary dashboard. This includes a calendar with a time stamp that enables clients to know how many artifacts are scheduled versus how many are submitted.</p>
+            <img src ="../Images/highlevelOverviewPMO.PNG" width="80%" >
+      
           </div>
           
-          <div class="float-child1">
+          <div class="space">
             <h6>Demo</h6>
-            <video width="320" height="240" controls>
+            <video width="320" height="240" class="center" controls>
               <source src="../Images/USI-KT Recordings Day2.mp4" type="video/mp4" class="center">
               Your browser does not support the video tag.
             </video>
           </div>
-        </div> 
+        </div>
+          
       </div>
     
       <button class="accordion">Review Artifacts and Workflow Tasks Currently Assigned</button>
       <div class="panel">
-         <div class="float-container1">
+        <div>
 
-          <div class="float-child1">
+          <div class="space">
+            
             <h6>Steps</h6>
-            <img src ="../Images/highlevelOverviewPMO.PNG" width="450px" >
-            <br>
-            <p>As seen in the picture above, each day is broken down into SCH or SUB </p>
+            <p>The first feature is the artifact summary dashboard. This includes a calendar with a time stamp that enables clients to know how many artifacts are scheduled versus how many are submitted.</p>
+            <img src ="../Images/highlevelOverviewPMO.PNG" width="80%" >
+      
           </div>
           
-          <div class="float-child1">
+          <div class="space">
             <h6>Demo</h6>
-            <video width="320" height="240" controls>
+            <video width="320" height="240" class="center" controls>
               <source src="../Images/USI-KT Recordings Day2.mp4" type="video/mp4" class="center">
               Your browser does not support the video tag.
             </video>
           </div>
-        </div> 
+        </div>
+          
       </div>
     
       <button class="accordion">Apply Filters to Dashboard Views</button>
       <div class="panel">
-         <div class="float-container1">
+        <div>
 
-          <div class="float-child1">
-            <p>As seen in the picture above, each day is broken down into SCH or SUB </p>
-            <h6>Steps</h6>
-            <img src ="../Images/highlevelOverviewPMO.PNG" width="450px" >
-            <br>
-            <div class="center">
+          <div class="space">
             
-          </div>
+            <h6>Steps</h6>
+            <p>The first feature is the artifact summary dashboard. This includes a calendar with a time stamp that enables clients to know how many artifacts are scheduled versus how many are submitted.</p>
+            <img src ="../Images/highlevelOverviewPMO.PNG" width="80%" >
+      
           </div>
           
-          <div class="float-child1">
+          <div class="space">
             <h6>Demo</h6>
-            <video width="320" height="240" controls>
+            <video width="320" height="240" class="center" controls>
               <source src="../Images/USI-KT Recordings Day2.mp4" type="video/mp4" class="center">
               Your browser does not support the video tag.
             </video>
           </div>
-        </div> 
+        </div>
+          
       </div>
 
 
     
   </div>
   
-</div>
 
 
-<div class="mt-5 p-4 bg-dark text-white text-center" >
+
+<div class="mt-5 col-lg-12 bg-dark text-white text-center col-sm-12" >
     <p>Powered By Deloitte</p>
     <p>Please contact us for any further inquiries: <a href="mailto:megrajesh@deloitte.com?subject=SOP Inquiry:Dashboard&body=Dear Megha,">Send Email</a> </p>
 </div>
