@@ -47,6 +47,10 @@
       float: top;
       padding: 20px;
   }
+  .space{
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
   .thumbnails {
       padding: 35px;
   }
@@ -193,8 +197,8 @@
 
 <div class="container mt-5">
   <div class="row">
-    <div class="col-sm-4">
-      <h3 class="mt-4">Some Links</h3>
+    <div class="col-sm-12 col-lg-4">
+      <h3 class="mt-4">Project Management</h3>
       <p>To find a tutorial specific to each module, click on the links below:</p>
       <ul class="nav nav-pills flex-column">
         <li class="nav-item">
@@ -231,9 +235,9 @@
 
 
   
-  <div class="float-container">
+  <div class="float-container col-sm-6 col-lg-12 space">
 
-    <div class="float-child">
+    <div>
     
 
 
@@ -249,16 +253,16 @@
       <button class="accordion">View contract summary and filter by status and anticipated closing date
       </button>
       <div class="panel">
-        <div class="float-container1">
+        <div>
 
-          <div class="float-child1">
+          <div class="space">
             <h6>Steps</h6>
             <img src ="../Images/highlevelOverviewPMO.PNG" width="450px" >
             <br>
             <p>As seen in the picture above, each day is broken down into SCH or SUB </p>
           </div>
           
-          <div class="float-child1">
+          <div class="space">
             <h6>Demo</h6>
             <video width="320" height="240" controls>
               <source src="../Images/USI-KT Recordings Day2.mp4" type="video/mp4" class="center">
@@ -271,16 +275,16 @@
       <button class="accordion">Sort contracts and drill down to view and edit contract details
       </button>
       <div class="panel">
-        <div class="float-container1">
+        <div>
 
-          <div class="float-child1">
+          <div class="space">
             <h6>Steps</h6>
             <img src ="../Images/highlevelOverviewPMO.PNG" width="450px" >
             <br>
             <p>As seen in the picture above, each day is broken down into SCH or SUB </p>
           </div>
           
-          <div class="float-child1">
+          <div class="space">
             <h6>Demo</h6>
             <div class="center">
             <video width="320" height="240" controls>
@@ -294,16 +298,16 @@
     
       <button class="accordion">Navigate to create new contract record  </button>
       <div class="panel">
-        <div class="float-container1">
+        <div>
 
-          <div class="float-child1">
+          <div class="space">
             <h6>Steps</h6>
             <img src ="../Images/highlevelOverviewPMO.PNG" width="450px" >
             <br>
             <p>As seen in the picture above, each day is broken down into SCH or SUB </p>
           </div>
           
-          <div class="float-child1">
+          <div class="space">
             <h6>Demo</h6>
             <video width="320" height="240" controls>
               <source src="../Images/USI-KT Recordings Day2.mp4" type="video/mp4" class="center">
@@ -314,118 +318,23 @@
       </div>
     </div>
     
-    <div class="float-child">
-      <h5>Click on image to expand</h5>
-            
-     <img id="myImg" src="../Images/ContractOverview.png" alt="Contracts Overview" style="width:100%;max-width:300px" class="center">
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-      
-<script>
-  // Get the button that opens the modal
-var btn = document.querySelectorAll("button.modal-button");
-
-// All page modals
-var modals = document.querySelectorAll('.modal');
-
-// Get the <span> element that closes the modal
-var spans = document.getElementsByClassName("close");
-
-// When the user clicks the button, open the modal
-for (var i = 0; i < btn.length; i++) {
- btn[i].onclick = function(e) {
-    e.preventDefault();
-    modal = document.querySelector(e.target.getAttribute("href"));
-    modal.style.display = "block";
- }
-}
-
-// When the user clicks on <span> (x), close the modal
-for (var i = 0; i < spans.length; i++) {
- spans[i].onclick = function() {
-    for (var index in modals) {
-      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
-    }
- }
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
-     for (var index in modals) {
-      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
-     }
-    }
-}
-</script>
-    </div>
     
   </div>
 
 
-  <div class="float-container">
+  <div class="float-container col-sm-6 col-lg-12 space">
 
-    <div class="float-child">
-      
-      <h5>Click on image to expand</h5>
-     
-      <img id="myImg" src="../Images/NewContract.png" alt="New Contracts" style="width:100%;max-width:300px" class="center">
- 
 
-       
-      <script>
-        // Get the button that opens the modal
-      var btn = document.querySelectorAll("button.modal-button");
-      
-      // All page modals
-      var modals = document.querySelectorAll('.modal');
-      
-      // Get the <span> element that closes the modal
-      var spans = document.getElementsByClassName("close");
-      
-      // When the user clicks the button, open the modal
-      for (var i = 0; i < btn.length; i++) {
-       btn[i].onclick = function(e) {
-          e.preventDefault();
-          modal = document.querySelector(e.target.getAttribute("href"));
-          modal.style.display = "block";
-       }
-      }
-      
-      // When the user clicks on <span> (x), close the modal
-      for (var i = 0; i < spans.length; i++) {
-       spans[i].onclick = function() {
-          for (var index in modals) {
-            if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
-          }
-       }
-      }
-      
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-          if (event.target.classList.contains('modal')) {
-           for (var index in modals) {
-            if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
-           }
-          }
-      }
-      </script>
-    </div>
     
-    <div class="float-child">
+    <div>
      
       <h2>New Contract</h2>
       <p>This feature enables you to create new contract records. Add and edit contract details and navigate to create associated purchase order records. Click on the links below to open the collapsible content:</p>
       <button class="accordion">Save and update contract record or save and add/ associate Purchase Order records to Contract  </button>
       <div class="panel">
-        <div class="float-container1">
+        <div>
 
-          <div class="float-child1">
+          <div class="space">
 
             <h6>Steps</h6>
             
@@ -434,7 +343,7 @@ window.onclick = function(event) {
             <p>As seen in the picture above, each day is broken down into SCH or SUB </p>
           </div>
           
-          <div class="float-child1">
+          <div class="space">
             <h6>Demo</h6>
             <video width="320" height="240" controls>
               <source src="../Images/USI-KT Recordings Day2.mp4" type="video/mp4" class="center">
@@ -446,16 +355,16 @@ window.onclick = function(event) {
       
       <button class="accordion">Edit or add contract details  </button>
       <div class="panel">
-        <div class="float-container1">
+        <div>
 
-          <div class="float-child1">
+          <div class="space">
             <h6>Steps</h6>
             <img src ="../Images/highlevelOverviewPMO.PNG" width="450px" >
             <br>
             <p>As seen in the picture above, each day is broken down into SCH or SUB </p>
           </div>
           
-          <div class="float-child1">
+          <div class="space">
             <h6>Demo</h6>
             <video width="320" height="240" controls>
               <source src="../Images/USI-KT Recordings Day2.mp4" type="video/mp4" class="center">
@@ -467,16 +376,16 @@ window.onclick = function(event) {
       
       <button class="accordion">View revision history</button>
       <div class="panel">
-        <div class="float-container1">
+        <div>
 
-          <div class="float-child1">
+          <div class="space">
             <h6>Steps</h6>
             <img src ="../Images/highlevelOverviewPMO.PNG" width="450px" >
             <br>
             <p>As seen in the picture above, each day is broken down into SCH or SUB </p>
           </div>
           
-          <div class="float-child1">
+          <div class="space">
             <h6>Demo</h6>
             <video width="320" height="240" controls>
               <source src="../Images/USI-KT Recordings Day2.mp4" type="video/mp4" class="center">
@@ -490,24 +399,24 @@ window.onclick = function(event) {
     
   </div>
 
-  <div class="float-container">
+  <div class="float-container col-sm-6 col-lg-12 space">
 
-    <div class="float-child">
+    <div>
       
       <h2>Contract Search</h2>
       <p>This feature allows one to search contracts, sort and filter results, and drill down to contract details. Click on the links below to open the collapsible content:</p>
       <button class="accordion">Search contracts across a range of criteria </button>
       <div class="panel">
-        <div class="float-container1">
+        <div>
 
-          <div class="float-child1">
+          <div class="space">
             <h6>Steps</h6>
             <img src ="../Images/highlevelOverviewPMO.PNG" width="450px" >
             <br>
             <p>As seen in the picture above, each day is broken down into SCH or SUB </p>
           </div>
           
-          <div class="float-child1">
+          <div class="space">
             <h6>Demo</h6>
             <video width="320" height="240" controls>
               <source src="../Images/USI-KT Recordings Day2.mp4" type="video/mp4" class="center">
@@ -519,16 +428,16 @@ window.onclick = function(event) {
       
       <button class="accordion">Sort and export search results and drill down to view and edit contract details </button>
       <div class="panel">
-        <div class="float-container1">
+        <div>
 
-          <div class="float-child1">
+          <div class="space">
             <h6>Steps</h6>
             <img src ="../Images/highlevelOverviewPMO.PNG" width="450px" >
             <br>
             <p>As seen in the picture above, each day is broken down into SCH or SUB </p>
           </div>
           
-          <div class="float-child1">
+          <div class="space">
             <h6>Demo</h6>
             <video width="320" height="240" controls>
               <source src="../Images/USI-KT Recordings Day2.mp4" type="video/mp4" class="center">
@@ -539,16 +448,6 @@ window.onclick = function(event) {
       </div>
     </div>
     
-    <div class="float-child">
-     
-      <h5>Roll over image for an expanded version:</h5>
-      <div class="thumbnails">
-        <div class="thumbnail">
-          <img src="../Images/ContractEdit.png">
-        </div>
-      </div>
-      
-    </div>
     
   </div>
 
